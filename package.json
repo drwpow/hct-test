@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build"
+  },
+  "dependencies": {
+    "@material/material-color-utilities": "^0.1.1",
+    "better-color-tools": "^0.6.1"
+  },
+  "devDependencies": {
+    "astro": "^0.23.7"
+  }
+}

@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title>HCT test</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    h2 {
+      margin: 2rem 0 0.5rem;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    #app {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .blend {
+      background: black;
+      display: flex;
+      height: 10px;
+    }
+    .blend :global(*) {
+      flex: 1;
+    }
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 2rem;
+    }
+    input {
+      border: 1px solid black;
+      border-radius: 2px;
+      font-family: ui-monospace, "SF Code Pro", Menlo, monospace;
+      width: 80px;
+      padding: 0;
+      height: 1.25rem;
+      text-indent: 0.5em;
+    };
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="menu">
+      <input type="color" id="c1" />
+      <input type="color" id="c2" />
+    </div>
+    <h2>HCT</h2>
+    <div class="blend hct"></div>
+    <h2>Oklab</h2>
+    <div class="blend oklab"></div>
+    <h2>Oklch</h2>
+    <div class="blend oklch"></div>
+    <h2>sRGB</h2>
+    <div class="blend srgb"></div>
+  </div>
+  <script type="module" src={Astro.resolve('../scripts/color.ts')}></script>
+</body>
+
+</html>
